@@ -1,0 +1,62 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earthquake Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        #map {
+            height: 600px;
+        }
+        /* Centering the form */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 10vh; /* Adjust as needed */
+            font-family: Arial, sans-serif;
+        }
+        #earthquake-form {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto; /* Center the form horizontally */ 
+        }       
+        #earthquake-form label {
+            margin-right: 10px;
+        }    
+        #earthquake-form input {
+            margin-right: 30px;
+        }    
+        #earthquake-form button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        #earthquake-form button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <script src="mapapp.js"></script> <!-- Include your JavaScript file here -->
+</head>
+<body>
+    <div id="map"></div>
+    <div class="container"
+        <form id="earthquake-form">
+            <label for="epicenter">Epicenter (City, Prefecture):</label>
+            <input type="text" id="epicenter" name="epicenter">
+            <label for="magnitude">Magnitude:</label>
+            <input type="text" id="magnitude" name="magnitude">
+            <button type="submit">Visualize Earthquake</button>
+        </form>
+    </div>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</body>
+</html>
